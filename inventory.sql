@@ -31,8 +31,6 @@ BEGIN
     CREATE TABLE products (
         id INT PRIMARY KEY,
         name NVARCHAR(50) NOT NULL,
-        price DECIMAL(10, 2) NOT NULL,
-        category_id INT NOT NULL,
         FOREIGN KEY (category_id) REFERENCES categories(id),
         -- Add a created_at column to track the creation date of the product
         created_at DATETIME NOT NULL DEFAULT GETDATE(),
