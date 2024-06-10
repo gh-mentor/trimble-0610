@@ -19,7 +19,7 @@ namespace PayrollLibrary
     - A constructor that initializes the name, address, and phoneNumber fields
     - 'AddDepartment'  adds a department to the company's list of departments
     - 'GetDepartment' returns a department object given an id
-    - 'ListDepartments' returns a list of department names
+    - 'ListDepartments' returns a list of department objects
     */
 
     public class Company
@@ -43,6 +43,11 @@ namespace PayrollLibrary
             departments.Add(department);
         }
 
+        /// <summary>
+        /// Retrieves the department with the specified ID.
+        /// </summary>     
+        /// <param name="id">The ID of the department to retrieve.</param>
+        /// <returns>The department with the specified ID, or null if not found.</returns>
         public Department? GetDepartment(int id)
         {
             foreach (Department department in departments)
@@ -61,17 +66,6 @@ namespace PayrollLibrary
 
     }
 
-    /*
-    Create a class called CompanyAddress.
-    private fields:
-    - address: a string that stores the company's address
-    - city: a string that stores the company's city
-    - state: a string that stores the company's state
-    - zip: a string that stores the company's zip code
-    public methods:
-    - A constructor that initializes the address, city, state, and zip fields
-    - 'GetFullAddress' returns the full address as a string
-    */
 
     public class CompanyAddress
     {
